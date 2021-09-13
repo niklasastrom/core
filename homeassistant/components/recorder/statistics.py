@@ -516,7 +516,9 @@ def statistics_during_period(
         )
         if not stats:
             return {}
-        return _sorted_statistics_to_dict(hass, stats, statistic_ids, metadata, True, table.duration)
+        return _sorted_statistics_to_dict(
+            hass, stats, statistic_ids, metadata, True, table.duration
+        )
 
 
 def get_last_statistics(
@@ -551,7 +553,12 @@ def get_last_statistics(
             return {}
 
         return _sorted_statistics_to_dict(
-            hass, stats, statistic_ids, metadata, convert_units, StatisticsShortTerm.duration
+            hass,
+            stats,
+            statistic_ids,
+            metadata,
+            convert_units,
+            StatisticsShortTerm.duration,
         )
 
 
